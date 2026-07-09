@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vice Fitness Hurlingham · 8 disciplinas · Necochea 870</title>
+<meta name="description" content="Gimnasio en Hurlingham con 8 disciplinas: CrossFit, Spinning, Boxeo, Funcional, Power, GAP, Yoga y Pilates Reformer. A 2 cuadras del tren Urquiza (estación Jorge Newbery). Promo Familia y Estudiantes." />
+<meta property="og:title" content="Vice Fitness Hurlingham" />
+<meta property="og:description" content="8 disciplinas · promo familia · a 2 cuadras del tren Urquiza." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0F0F14;--bg-2:#17171F;--bg-3:#1E1E28;--accent:#9D4EDD;--accent-2:#B6FF3C;--accent-glow:rgba(157,78,221,0.4);--lime-glow:rgba(182,255,60,0.3);--text:#F5F5F5;--text-2:#A8A8B8;--text-3:#6B6B7B;--border:rgba(255,255,255,0.08);--border-2:rgba(255,255,255,0.15);--glass:rgba(255,255,255,0.03);--gradient-primary:linear-gradient(135deg,#9D4EDD 0%,#B6FF3C 100%);--radius-sm:8px;--radius:16px;--radius-lg:24px;--shadow-purple:0 20px 60px -20px rgba(157,78,221,0.5);--shadow-lime:0 20px 60px -20px rgba(182,255,60,0.35)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Archivo Black',sans-serif;line-height:1.05;letter-spacing:-0.02em}
+.display{font-size:clamp(2.5rem,7vw,5.5rem)}
+.h2{font-size:clamp(2rem,4.5vw,3.5rem)}
+.eyebrow{font-family:'Space Grotesk',sans-serif;text-transform:uppercase;letter-spacing:0.2em;font-size:0.75rem;font-weight:600;color:var(--accent-2);margin-bottom:1rem;display:inline-block}
+.container{max-width:1240px;margin:0 auto;padding:0 1.5rem}
+section{padding:6rem 0;position:relative}
+@media(max-width:768px){section{padding:4rem 0}}
+#preloader{position:fixed;inset:0;background:var(--bg);z-index:9999;display:flex;align-items:center;justify-content:center;transition:opacity 0.6s ease,visibility 0.6s ease}
+#preloader.hidden{opacity:0;visibility:hidden}
+.preloader-logo{font-family:'Archivo Black',sans-serif;font-size:3rem;background:var(--gradient-primary);-webkit-background-clip:text;background-clip:text;color:transparent;animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.6;transform:scale(0.96)}}
+#scroll-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--gradient-primary);z-index:999;transition:width 0.1s linear}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 1.5rem;background:rgba(15,15,20,0.7);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+nav .container{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Archivo Black',sans-serif;font-size:1.4rem;background:var(--gradient-primary);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-0.02em}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:var(--text-2);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--accent-2);color:var(--bg) !important;padding:0.6rem 1.2rem;border-radius:999px;font-weight:600 !important}
+@media(max-width:768px){.nav-links a:not(.nav-cta){display:none}}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:8rem;padding-bottom:4rem;position:relative;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:0.55;z-index:0;pointer-events:none}
+.blob-1{width:600px;height:600px;background:var(--accent);top:-100px;left:-200px;animation:float 18s ease-in-out infinite}
+.blob-2{width:500px;height:500px;background:var(--accent-2);bottom:-150px;right:-150px;animation:float 22s ease-in-out infinite reverse;opacity:0.25}
+@keyframes float{0%,100%{transform:translate(0,0)}33%{transform:translate(60px,-40px)}66%{transform:translate(-40px,60px)}}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.4fr 1fr;gap:4rem;align-items:center}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}}
+.hero h1 span{background:var(--gradient-primary);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:1.15rem;color:var(--text-2);margin-top:1.5rem;max-width:520px}
+.hero-ctas{display:flex;gap:1rem;margin-top:2.5rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:0.6rem;padding:1rem 1.8rem;border-radius:999px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:transform 0.2s ease,box-shadow 0.2s ease;cursor:pointer;border:none}
+.btn-primary{background:var(--accent-2);color:var(--bg);box-shadow:var(--shadow-lime)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 25px 70px -20px rgba(182,255,60,0.6)}
+.btn-secondary{background:transparent;color:var(--text);border:1.5px solid var(--border-2)}
+.btn-secondary:hover{background:var(--glass);transform:translateY(-3px)}
+.trust-bar{display:flex;gap:2rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:0.6rem;color:var(--text-2);font-size:0.85rem}
+.trust-item svg{color:var(--accent-2);flex-shrink:0}
+.hero-visual{aspect-ratio:4/5;border-radius:var(--radius-lg);background:linear-gradient(135deg,var(--bg-3),var(--bg-2));border:1px solid var(--border);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.hero-visual::before{content:'[FOTO_HERO]';color:var(--text-3);font-size:0.85rem;font-family:'Space Grotesk',sans-serif;letter-spacing:0.1em;text-transform:uppercase}
+.hero-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 50%,var(--accent-glow) 100%);pointer-events:none}
+.hero-floating-card{position:absolute;bottom:-20px;left:-20px;background:var(--bg-2);border:1px solid var(--border-2);padding:1rem 1.4rem;border-radius:var(--radius);display:flex;align-items:center;gap:0.8rem;box-shadow:var(--shadow-purple);z-index:2}
+.hero-floating-card .dot{width:10px;height:10px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 12px var(--accent-2)}
+.hero-floating-card strong{display:block;font-size:0.85rem}
+.hero-floating-card span{font-size:0.75rem;color:var(--text-2)}
+.stats{background:var(--bg-2);padding:3rem 0;border-block:1px solid var(--border)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+@media(max-width:768px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+.stat{text-align:center}
+.stat .num{font-family:'Archivo Black',sans-serif;font-size:clamp(2rem,4vw,3rem);background:var(--gradient-primary);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat .lbl{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--text-2);margin-top:0.5rem}
+.section-head{text-align:center;max-width:700px;margin:0 auto 4rem}
+.section-head p{color:var(--text-2);margin-top:1rem;font-size:1.05rem}
+.disciplines-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+@media(max-width:900px){.disciplines-grid{grid-template-columns:repeat(2,1fr)}}
+.discipline{background:var(--bg-2);border:1px solid var(--border);padding:1.8rem 1.4rem;border-radius:var(--radius);transition:transform 0.3s ease,border-color 0.3s ease,background 0.3s ease;cursor:pointer;position:relative;overflow:hidden}
+.discipline::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gradient-primary);transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease}
+.discipline:hover{transform:translateY(-6px);border-color:var(--accent);background:var(--bg-3)}
+.discipline:hover::before{transform:scaleX(1)}
+.discipline .icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent-glow),transparent);display:flex;align-items:center;justify-content:center;color:var(--accent-2);margin-bottom:1rem}
+.discipline h4{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;margin-bottom:0.4rem}
+.discipline p{font-size:0.85rem;color:var(--text-2)}
+.why{background:var(--bg-2)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+@media(max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.why-grid{grid-template-columns:1fr}}
+.why-card{padding:2rem 1.6rem;border-radius:var(--radius);background:var(--bg-3);border:1px solid var(--border);position:relative}
+.why-card .num-badge{position:absolute;top:1.4rem;right:1.4rem;font-family:'Archivo Black',sans-serif;font-size:2.5rem;color:var(--border-2)}
+.why-card h4{font-family:'Space Grotesk',sans-serif;font-size:1.15rem;margin-bottom:0.6rem;margin-top:2rem}
+.why-card p{color:var(--text-2);font-size:0.9rem}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+@media(max-width:900px){.pricing-grid{grid-template-columns:1fr}}
+.plan{background:var(--bg-2);border:1px solid var(--border);padding:2.2rem 1.8rem;border-radius:var(--radius-lg);position:relative;display:flex;flex-direction:column}
+.plan.featured{border-color:var(--accent);background:linear-gradient(180deg,var(--bg-2),var(--bg-3));transform:scale(1.03);box-shadow:var(--shadow-purple)}
+@media(max-width:900px){.plan.featured{transform:none}}
+.plan .badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gradient-primary);color:var(--bg);padding:0.4rem 1rem;border-radius:999px;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase}
+.plan h3{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;margin-bottom:0.4rem}
+.plan .plan-desc{color:var(--text-2);font-size:0.9rem;margin-bottom:1.5rem}
+.plan .price{font-family:'Archivo Black',sans-serif;font-size:2.5rem;margin-bottom:0.2rem}
+.plan .price small{font-family:'Inter',sans-serif;font-size:0.9rem;color:var(--text-2);font-weight:500}
+.plan .price-note{font-size:0.8rem;color:var(--accent-2);margin-bottom:1.5rem}
+.plan ul{list-style:none;margin-bottom:2rem;flex-grow:1}
+.plan ul li{padding:0.6rem 0;border-bottom:1px solid var(--border);font-size:0.9rem;display:flex;gap:0.6rem}
+.plan ul li::before{content:'✓';color:var(--accent-2);font-weight:700}
+.plan ul li.na{color:var(--text-3)}
+.plan ul li.na::before{content:'·';color:var(--text-3)}
+.steps{background:var(--bg-2)}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;position:relative}
+@media(max-width:900px){.steps-grid{grid-template-columns:1fr}}
+.step{background:var(--bg-3);padding:2rem 1.8rem;border-radius:var(--radius);border:1px solid var(--border);position:relative}
+.step .step-num{font-family:'Archivo Black',sans-serif;font-size:3.5rem;background:var(--gradient-primary);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;margin-bottom:0.8rem}
+.step h4{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;margin-bottom:0.5rem}
+.step p{color:var(--text-2);font-size:0.9rem}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,200px);gap:0.8rem}
+@media(max-width:768px){.gallery-grid{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(4,180px)}}
+.gallery-item{background:var(--bg-3);border-radius:var(--radius);border:1px solid var(--border);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;color:var(--text-3);font-family:'Space Grotesk',sans-serif;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;transition:transform 0.3s}
+.gallery-item:hover{transform:scale(1.02)}
+.gallery-item.wide{grid-column:span 2}
+.gallery-item.tall{grid-row:span 2}
+.gallery-item::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 60%,var(--accent-glow));pointer-events:none}
+.testimonials{background:var(--bg-2)}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+@media(max-width:900px){.testimonial-grid{grid-template-columns:1fr}}
+.testimonial{background:var(--bg-3);padding:2rem;border-radius:var(--radius);border:1px solid var(--border);position:relative}
+.testimonial .stars{color:var(--accent-2);margin-bottom:1rem;letter-spacing:3px}
+.testimonial p.quote{font-size:0.95rem;color:var(--text);margin-bottom:1.5rem}
+.testimonial p.quote::before{content:'"';font-family:'Archivo Black',sans-serif;font-size:3rem;color:var(--accent);line-height:0;margin-right:0.2rem;vertical-align:-0.5rem}
+.testimonial .who{display:flex;align-items:center;gap:0.8rem;padding-top:1rem;border-top:1px solid var(--border)}
+.testimonial .avatar{width:40px;height:40px;border-radius:50%;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;font-family:'Archivo Black',sans-serif;color:var(--bg)}
+.testimonial .who strong{display:block;font-size:0.9rem}
+.testimonial .who span{font-size:0.75rem;color:var(--text-2)}
+.faq-list{max-width:800px;margin:0 auto}
+.faq-item{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:0.8rem;overflow:hidden}
+.faq-item summary{padding:1.4rem 1.6rem;cursor:pointer;font-weight:600;display:flex;justify-content:space-between;align-items:center;list-style:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';font-size:1.5rem;color:var(--accent-2);transition:transform 0.3s}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item[open]{border-color:var(--accent)}
+.faq-item .faq-body{padding:0 1.6rem 1.4rem;color:var(--text-2);font-size:0.95rem}
+.schedule{background:var(--bg-2)}
+.schedule-table{width:100%;max-width:800px;margin:0 auto;border-collapse:separate;border-spacing:0;background:var(--bg-3);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border)}
+.schedule-table th,.schedule-table td{padding:1rem 1.4rem;text-align:left;border-bottom:1px solid var(--border)}
+.schedule-table th{background:rgba(157,78,221,0.1);font-family:'Space Grotesk',sans-serif;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-2)}
+.schedule-table tr:last-child td{border-bottom:none}
+.schedule-table td.highlight{color:var(--accent-2);font-weight:600}
+.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+@media(max-width:900px){.location-grid{grid-template-columns:1fr}}
+.map-wrapper{aspect-ratio:4/3;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);background:var(--bg-3)}
+.map-wrapper iframe{width:100%;height:100%;border:0;filter:invert(0.9) hue-rotate(180deg) saturate(0.7)}
+.location-info h2{margin-bottom:1.5rem}
+.location-info .transit{display:flex;gap:1rem;padding:1.2rem;background:var(--bg-2);border-radius:var(--radius);border-left:3px solid var(--accent-2);margin-bottom:1rem}
+.location-info .transit strong{display:block;margin-bottom:0.3rem}
+.location-info .transit p{color:var(--text-2);font-size:0.9rem;margin:0}
+.brands{background:linear-gradient(180deg,var(--bg),var(--bg-2))}
+.brands-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+@media(max-width:900px){.brands-grid{grid-template-columns:1fr}}
+.brand-card{background:var(--bg-2);padding:2.5rem 2rem;border-radius:var(--radius-lg);border:1px solid var(--border);text-align:center}
+.brand-card .brand-badge{display:inline-block;padding:0.3rem 0.9rem;background:var(--accent-glow);color:var(--accent-2);border-radius:999px;font-size:0.7rem;font-family:'Space Grotesk',sans-serif;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1rem}
+.brand-card h4{font-family:'Space Grotesk',sans-serif;font-size:1.15rem;margin-bottom:0.5rem}
+.brand-card p{color:var(--text-2);font-size:0.9rem}
+.final-cta{padding:8rem 0;position:relative;overflow:hidden;text-align:center}
+.final-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,var(--accent-glow),transparent 60%);z-index:0}
+.final-cta .container{position:relative;z-index:1}
+.final-cta h2{max-width:800px;margin:0 auto 1.5rem}
+.final-cta p{color:var(--text-2);font-size:1.1rem;max-width:600px;margin:0 auto 2.5rem}
+footer{background:var(--bg-2);padding:4rem 0 2rem;border-top:1px solid var(--border)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}}
+.footer-col h5{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--accent-2);margin-bottom:1.2rem}
+.footer-col a,.footer-col p{color:var(--text-2);font-size:0.9rem;text-decoration:none;display:block;margin-bottom:0.6rem;transition:color 0.2s}
+.footer-col a:hover{color:var(--text)}
+.footer-brand p{max-width:320px}
+.socials{display:flex;gap:0.8rem;margin-top:1rem}
+.socials a{width:40px;height:40px;border-radius:50%;background:var(--bg-3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-2);margin:0;transition:all 0.2s}
+.socials a:hover{border-color:var(--accent);color:var(--accent-2);transform:translateY(-2px)}
+.footer-bottom{padding-top:2rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-3);flex-wrap:wrap;gap:1rem}
+.whatsapp-sticky{position:fixed;bottom:24px;right:24px;z-index:90;width:60px;height:60px;border-radius:50%;background:#25D366;color:white;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 40px rgba(37,211,102,0.5);text-decoration:none;transition:transform 0.2s}
+.whatsapp-sticky:hover{transform:scale(1.1)}
+.whatsapp-sticky::before{content:'';position:absolute;inset:-6px;border-radius:50%;background:rgba(37,211,102,0.4);animation:ripple 1.8s ease-out infinite;z-index:-1}
+@keyframes ripple{0%{transform:scale(1);opacity:1}100%{transform:scale(1.8);opacity:0}}
+.reveal{opacity:0;transform:translateY(30px);transition:all 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<div id="preloader"><div class="preloader-logo">VICE FITNESS</div></div>
+<div id="scroll-progress"></div>
+
+<nav>
+  <div class="container">
+    <div class="logo">VICE FITNESS</div>
+    <div class="nav-links">
+      <a href="#disciplinas">Disciplinas</a>
+      <a href="#planes">Planes</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a class="nav-cta" href="[WHATSAPP]">Escribinos</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="container hero-inner">
+    <div class="hero-content reveal">
+      <span class="eyebrow">Necochea 870 · Hurlingham</span>
+      <h1 class="display">Tu entrenamiento,<br><span>tu ritmo,</span><br>tu comunidad.</h1>
+      <p class="lead">Un gimnasio con 8 disciplinas, entrenadores especializados y un espacio que no se siente como un local más. A 2 cuadras del tren Urquiza.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="[WHATSAPP]">Reservá tu clase de prueba<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        <a class="btn btn-secondary" href="#planes">Ver planes</a>
+      </div>
+      <div class="trust-bar">
+        <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>8 disciplinas activas</div>
+        <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Ecosistema tri-marca</div>
+        <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Comunidad Hurlingham</div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hero-floating-card">
+        <div class="dot"></div>
+        <div><strong>Abierto ahora</strong><span>L-V hasta las 23:00</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat reveal"><div class="num" data-count="8">0</div><div class="lbl">Disciplinas</div></div>
+      <div class="stat reveal"><div class="num" data-count="16">0</div><div class="lbl">Hs abiertos L-V</div></div>
+      <div class="stat reveal"><div class="num" data-count="3">0</div><div class="lbl">Marcas del grupo</div></div>
+      <div class="stat reveal"><div class="num" data-count="2">0</div><div class="lbl">Cuadras al tren</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="disciplinas">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">8 formas de entrenar</span>
+      <h2 class="h2">Elegí cómo querés moverte.</h2>
+      <p>Cada disciplina tiene entrenadores dedicados y horarios pensados para que entrene el que arranca a las 7 y el que sale de trabajar a las 22.</p>
+    </div>
+    <div class="disciplines-grid">
+      <div class="discipline reveal"><div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.4 14.4L9.6 9.6"/><rect x="2" y="9" width="4" height="6" rx="1"/><rect x="18" y="9" width="4" height="6" rx="1"/><path d="M6 12h12"/></svg></div><h4>CrossFit</h4><p>Fuerza + resistencia + comunidad.</p></div>
+      <div class="discipline reveal"><div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div><h4>Spinning</h4><p>L y Mi 18hs. Ritmo alto.</p></div>
+      <div class="discipline reveal"><div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="12" r="3"/><circle cx="17" cy="12" r="3"/><path d="M10 12h4"/></svg></div><h4>Boxeo</h4><p>Ma/Ju 19hs · Sáb 10hs.</p></div>
+      <div class="discipline reveal"><div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v18M12 3v18M18 3v18"/></svg></div><h4>GAP</h4><p>Glúteos, abdominales y piernas.</p></div>
+      <div class="discipline reveal"><div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18l4-8 4 4 4-10 6 14"/></svg></div><h4>Funcional</h4><p>Movimiento aplicado a tu día.</p></div>
+      <div class="discipline reveal"><div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="10" width="4" height="4"/><rect x="17" y="10" width="4" height="4"/><rect x="9" y="11" width="6" height="2"/></svg></div><h4>Power</h4><p>Sala completa · máquinas + libre.</p></div>
+      <div class="discipline reveal"><div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a5 5 0 015 5c0 5-5 13-5 13S7 13 7 8a5 5 0 015-5z"/><circle cx="12" cy="8" r="2"/></svg></div><h4>Yoga</h4><p>Movilidad, respiración, calma.</p></div>
+      <div class="discipline reveal"><div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="8" rx="2"/><path d="M8 12h8"/></svg></div><h4>Pilates Reformer</h4><p>Camas Reformer profesionales.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Por qué Vice</span><h2 class="h2">No es un gimnasio más.</h2></div>
+    <div class="why-grid">
+      <div class="why-card reveal"><span class="num-badge">01</span><h4>Ecosistema tri-marca</h4><p>Vice Fitness + Vice Fitness ARG (equipamiento profesional) + Body Spa OK. Mismo grupo, tres puntas.</p></div>
+      <div class="why-card reveal"><span class="num-badge">02</span><h4>Ubicación premium</h4><p>Necochea 870, a media cuadra de av. Roca y a 2 cuadras de la estación Jorge Newbery del tren Urquiza.</p></div>
+      <div class="why-card reveal"><span class="num-badge">03</span><h4>Multi-disciplina real</h4><p>8 disciplinas activas con entrenadores especializados. No es sala + una clase, es sala + 7 clases.</p></div>
+      <div class="why-card reveal"><span class="num-badge">04</span><h4>Comunidad Hurlingham</h4><p>Promo específica para estudiantes de Hurlingham y descuentos familiares. El barrio entrena acá.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="planes">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Planes y promos</span><h2 class="h2">Elegí tu plan.</h2><p>Promos vigentes verificadas. Todos los planes incluyen acceso a la sala más las clases dictadas ese día.</p></div>
+    <div class="pricing-grid">
+      <div class="plan reveal">
+        <h3>Individual</h3>
+        <p class="plan-desc">Tu entrenamiento, sin ataduras.</p>
+        <div class="price">[CONFIRMAR]<small> /mes</small></div>
+        <p class="price-note">Consultá por WhatsApp</p>
+        <ul>
+          <li>Acceso completo a sala</li>
+          <li>Todas las clases del día</li>
+          <li>Cambio de plan sin costo</li>
+          <li class="na">Descuentos familiares</li>
+        </ul>
+        <a class="btn btn-secondary" href="[WHATSAPP]">Consultar</a>
+      </div>
+      <div class="plan featured reveal">
+        <span class="badge">Más elegida</span>
+        <h3>Promo Familia</h3>
+        <p class="plan-desc">Desde 3 personas del mismo grupo.</p>
+        <div class="price">$40.000<small> /mes por persona</small></div>
+        <p class="price-note">Efectivo · desde 3 miembros</p>
+        <ul>
+          <li>Acceso completo a sala</li>
+          <li>Todas las clases del día</li>
+          <li>Descuento por cada integrante</li>
+          <li>Un solo pago familiar</li>
+        </ul>
+        <a class="btn btn-primary" href="[WHATSAPP]">Sumar familia</a>
+      </div>
+      <div class="plan reveal">
+        <h3>Estudiantes Hurlingham</h3>
+        <p class="plan-desc">Si estudiás en Hurlingham, tu precio.</p>
+        <div class="price">$40.000<small> /mes</small></div>
+        <p class="price-note">Efectivo · con credencial vigente</p>
+        <ul>
+          <li>Acceso completo a sala</li>
+          <li>Todas las clases del día</li>
+          <li>Renovación mensual</li>
+          <li class="na">Descuento familiar</li>
+        </ul>
+        <a class="btn btn-secondary" href="[WHATSAPP]">Aplicar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Cómo empezar</span><h2 class="h2">En 3 pasos estás entrenando.</h2></div>
+    <div class="steps-grid">
+      <div class="step reveal"><div class="step-num">01</div><h4>Escribinos por WhatsApp</h4><p>Contanos qué querés entrenar, tu disponibilidad horaria y si te sumás solo o con familia.</p></div>
+      <div class="step reveal"><div class="step-num">02</div><h4>Probá una clase</h4><p>Coordinamos día y horario para que vengas a probar la disciplina que te interesa, sin compromiso.</p></div>
+      <div class="step reveal"><div class="step-num">03</div><h4>Sumate a Vice</h4><p>Si te copó (y suele copar), elegís plan y arrancás. Sin cuotas ocultas ni permanencia mínima.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Instalaciones</span><h2 class="h2">Un lugar donde da ganas entrar.</h2></div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall reveal">[GALERIA_1]</div>
+      <div class="gallery-item wide reveal">[GALERIA_2]</div>
+      <div class="gallery-item reveal">[GALERIA_3]</div>
+      <div class="gallery-item reveal">[GALERIA_4]</div>
+      <div class="gallery-item wide reveal">[GALERIA_5]</div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Lo que dicen</span><h2 class="h2">Historias del barrio.</h2></div>
+    <div class="testimonial-grid">
+      <div class="testimonial reveal"><div class="stars">★★★★★</div><p class="quote">[TESTIMONIO_1] — reemplazar con Google Review verificado.</p><div class="who"><div class="avatar">I</div><div><strong>[NOMBRE_1]</strong><span>Socio · [DISCIPLINA]</span></div></div></div>
+      <div class="testimonial reveal"><div class="stars">★★★★★</div><p class="quote">[TESTIMONIO_2] — reemplazar con Google Review verificado.</p><div class="who"><div class="avatar">N</div><div><strong>[NOMBRE_2]</strong><span>Socio · [DISCIPLINA]</span></div></div></div>
+      <div class="testimonial reveal"><div class="stars">★★★★★</div><p class="quote">[TESTIMONIO_3] — reemplazar con Google Review verificado.</p><div class="who"><div class="avatar">F</div><div><strong>[NOMBRE_3]</strong><span>Socio · [DISCIPLINA]</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="horarios" class="schedule">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Horarios</span><h2 class="h2">Abierto cuando lo necesitás.</h2></div>
+    <table class="schedule-table reveal">
+      <thead><tr><th>Día</th><th>Sala</th><th>Clase destacada</th></tr></thead>
+      <tbody>
+        <tr><td>Lunes</td><td class="highlight">7:00 — 23:00</td><td>Spinning 18hs</td></tr>
+        <tr><td>Martes</td><td class="highlight">7:00 — 23:00</td><td>Boxeo 19hs</td></tr>
+        <tr><td>Miércoles</td><td class="highlight">7:00 — 23:00</td><td>Spinning 18hs</td></tr>
+        <tr><td>Jueves</td><td class="highlight">7:00 — 23:00</td><td>Boxeo 19hs</td></tr>
+        <tr><td>Viernes</td><td class="highlight">7:00 — 23:00</td><td>Funcional</td></tr>
+        <tr><td>Sábado</td><td class="highlight">9:00 — 18:00</td><td>Boxeo 10hs</td></tr>
+        <tr><td>Domingo</td><td>Consultar por WhatsApp</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="ubicacion">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Ubicación</span><h2 class="h2">A 2 cuadras del tren Urquiza.</h2></div>
+    <div class="location-grid">
+      <div class="map-wrapper reveal"><iframe src="https://www.google.com/maps?q=Necochea+870+Hurlingham&output=embed" loading="lazy"></iframe></div>
+      <div class="location-info reveal">
+        <div class="transit"><div><strong>🚉 Tren Urquiza</strong><p>Estación Jorge Newbery a 2 cuadras del gimnasio.</p></div></div>
+        <div class="transit"><div><strong>🚗 Auto</strong><p>Media cuadra de av. Roca. Estacionamiento en zona.</p></div></div>
+        <div class="transit"><div><strong>📍 Dirección</strong><p>Necochea 870 · Hurlingham · Buenos Aires.</p></div></div>
+        <a class="btn btn-primary" href="https://www.google.com/maps?q=Necochea+870+Hurlingham" style="margin-top:1rem;">Cómo llegar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="brands">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Nuestro grupo</span><h2 class="h2">Somos parte de algo más grande.</h2><p>Un ecosistema de tres marcas dedicadas al fitness y al bienestar en Argentina.</p></div>
+    <div class="brands-grid">
+      <div class="brand-card reveal"><span class="brand-badge">Gimnasio</span><h4>Vice Fitness Hurlingham</h4><p>Este es nuestro home: 8 disciplinas, comunidad barrial y horario extendido.</p></div>
+      <div class="brand-card reveal"><span class="brand-badge">Equipamiento</span><h4>Vice Fitness ARG</h4><p>Equipamiento profesional para gimnasios en todo el país.</p></div>
+      <div class="brand-card reveal"><span class="brand-badge">Bienestar</span><h4>Body Spa OK</h4><p>Servicios de recuperación, estética y bienestar complementarios al entrenamiento.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Preguntas frecuentes</span><h2 class="h2">Antes de escribir, mirá esto.</h2></div>
+    <div class="faq-list">
+      <details class="faq-item reveal"><summary>¿Puedo probar una clase antes de suscribirme?</summary><div class="faq-body">Sí. Escribinos por WhatsApp, coordinamos día y horario, y venís sin compromiso.</div></details>
+      <details class="faq-item reveal"><summary>¿Cómo funciona la Promo Familia?</summary><div class="faq-body">Desde 3 personas del mismo grupo familiar, cada una paga $40.000 al mes en efectivo. El descuento se aplica automáticamente al alta.</div></details>
+      <details class="faq-item reveal"><summary>¿La Promo Estudiantes vale para cualquier estudiante?</summary><div class="faq-body">Está pensada para estudiantes de instituciones de Hurlingham. Se acredita con la credencial vigente.</div></details>
+      <details class="faq-item reveal"><summary>¿Tengo permanencia mínima?</summary><div class="faq-body">No. Los planes son mensuales y se pueden dar de baja al finalizar el mes en curso.</div></details>
+      <details class="faq-item reveal"><summary>¿Puedo pausar mi cuota si viajo?</summary><div class="faq-body">Sí, se coordina por WhatsApp con anticipación. [CONFIRMAR condiciones específicas]</div></details>
+      <details class="faq-item reveal"><summary>¿Tienen estacionamiento?</summary><div class="faq-body">La zona cuenta con estacionamiento en calle. Además, estamos a media cuadra de av. Roca y a 2 cuadras del tren Urquiza (estación Jorge Newbery).</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <span class="eyebrow reveal">Nos vemos en la sala</span>
+    <h2 class="display reveal">Empezá <span style="background:var(--gradient-primary);-webkit-background-clip:text;background-clip:text;color:transparent;">esta semana</span>.</h2>
+    <p class="reveal">Escribinos por WhatsApp, coordinamos tu clase de prueba, y decidís después. Sin apuros.</p>
+    <a class="btn btn-primary reveal" href="[WHATSAPP]" style="font-size:1.1rem;padding:1.2rem 2.2rem;">Escribir por WhatsApp<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <div class="logo" style="margin-bottom:1rem;">VICE FITNESS</div>
+        <p>Gimnasio en Hurlingham con 8 disciplinas, entrenadores especializados y comunidad barrial. Parte del grupo Vice Fitness ARG + Body Spa OK.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/vicefitnesshurlingham/" aria-label="Instagram"><svg width=
